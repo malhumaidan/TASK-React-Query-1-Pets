@@ -1,6 +1,6 @@
 ### Steps
 
-Fork and clone [this repo](https://github.com/JoinCODED/REACT-SP-Pets-Query) into your `Development` folder
+Fork and clone [this repo](https://github.com/JoinCODED/TASK-React-Query-1-Pets) into your `Development` folder
 
 ### Query
 
