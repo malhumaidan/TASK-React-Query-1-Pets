@@ -1,5 +1,7 @@
+import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import PetItem from "./PetItem";
+import { list, adopt } from '../utils/api/pets/index'
 
 function PetsList({ petsData }) {
   const [query, setQuery] = useState("");
@@ -9,7 +11,14 @@ function PetsList({ petsData }) {
   const handleAdopt = (petId) =>
     setPets(pets.filter((pet) => pet.id !== petId));
 
-  const petList = pets
+
+
+  const response = useQuery(['pets'], list)
+  console.log(response.data?.data)
+
+
+
+  const petList = response.data?.data
     .filter(
       (pet) =>
         pet.name.toLowerCase().includes(query.toLowerCase()) &&
